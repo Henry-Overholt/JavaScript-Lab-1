@@ -21,18 +21,19 @@ if (detroitGC === true) {
 for (let i = 0; i < lifeEvents.length; i++) {
   console.log(lifeEvents[i]);
 }
+let randomNumber = Math.floor(Math.random() * 9 + 1);
+let counter = 0;
 
 while (true) {
-  let randomNumber = Math.floor(Math.random() * 9 + 1);
-  let counter = 0;
   if (randomNumber !== 5) {
     console.log(`${randomNumber} !==5`);
     randomNumber = Math.floor(Math.random() * 9 + 1);
     counter++;
-  } else if (randomNumber === 5);
-  counter++;
-  console.log(
-    `5===5 It took ${counter} iterations to randomly generate the number 5.`
-  );
-  break;
+  } else if (randomNumber === 5) {
+    counter++;
+    console.log(
+      `5===5 It took ${counter} iterations to randomly generate the number 5.`
+    );
+    break;
+  }
 }
